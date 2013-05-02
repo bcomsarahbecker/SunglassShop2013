@@ -6,10 +6,10 @@
  */
 
 var CatEyeIMALink = baseServerURL + '/shop/jewelry-accessories/cat-eye?id=20024';
-var ShieldIMAIMALink = baseServerURL + '/shop/jewelry-accessories/shield?id=20025';
+var ShieldIMALink = baseServerURL + '/shop/jewelry-accessories/shield?id=20025';
 var OversizedIMALink = baseServerURL + '/shop/jewelry-accessories/oversized?id=21104';
 var WayfarerIMALink = baseServerURL + '/shop/jewelry-accessories/wayfarer?id=1000091';
-var PolarizedIMALink = baseServerURL + '/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=LENS_TYPE%3DPolarized%26sortBy%3DORIGINAL%26productsPerPage%3D96';
+var PolarizedIMALink = baseServerURL + '/shop/jewelry-accessories/polarized?id=1001443';
 var AviatorIMALink = baseServerURL + '/shop/jewelry-accessories/aviator?id=4522';
 
 mapDomCmArray = [];
@@ -22,7 +22,10 @@ $(function() {
     $('#SunglassShop2013 map .sun_bottommenu').mouseover(function(){
         if ($('.imageoverlay').length != 0)
             $('.imageoverlay').remove();
-
+        
+        if ($('.SunglassShop2013LinkOverlay').length != 0)
+            $('.SunglassShop2013LinkOverlay').remove();
+        
         if ($('.menuoverlay').length != 0)
             $('.menuoverlay').remove();
 
@@ -46,6 +49,9 @@ $(function() {
     $('#SunglassShop2013 map .sun_bottomimage').mouseover(function(evt){
         if ($('.menuoverlay').length != 0)
             $('.menuoverlay').remove();
+        
+        if ($('.SunglassShop2013LinkOverlay').length != 0)
+            $('.SunglassShop2013LinkOverlay').remove();       
 
         if ($('.imageoverlay').length != 0)
             $('.imageoverlay').remove();
@@ -54,7 +60,14 @@ $(function() {
         var oclass = this.id + 'Overlay';
         var tlink = this.id + 'Link';
 
-        var insertDiv = '<a href="' + window[tlink] + '">';
+        //var insertDiv = '<a href="' + window[tlink] + '" class="' + 'SunglassShop2013LinkOverlay';
+        //var insertDiv = '<div class="' + 'SunglassShop2013LinkOverlay';
+        //insertDiv += '" id="' + odiv + '">';
+        
+        //var insertDiv = '<div id="' + odiv + '"';
+        //insertDiv += ' class="imageoverlay ' + oclass +  '"></div>';
+
+        var insertDiv = '<a href="' + window[tlink] + '" class="imageoverlaylink">';
         insertDiv += '<div id="' + odiv;
         insertDiv += '" class="' + 'imageoverlay ' + oclass + '"></div></a>';
 
@@ -63,13 +76,24 @@ $(function() {
         return false;
     });
 
+    $('#SunglassShop2013').mouseleave(function(evt){
+        if ($('.SunglassShop2013LinkOverlay').length != 0)
+            $('.SunglassShop2013LinkOverlay').remove();
+        
+        if ($('.imageoverlay').length != 0)
+            $('.imageoverlay').remove();
+        evt.stopImmediatePropagation();
+        return false;
+    });
+
     function mapDomToCoremetricsTags(){
-        mapDomCmArray.push(new mapDomCmItem('SunglassShop2013', 'spring13_sunglass_shop--hp'));
+        mapDomCmArray.push(new mapDomCmItem('TheSunglassShopIMA', 'top_nav--sunglass_shop'));
         mapDomCmArray.push(new mapDomCmItem('DiorIMA', 'top_nav--dior'));
         mapDomCmArray.push(new mapDomCmItem('GucciIMA', 'top_nav--gucci'));
         mapDomCmArray.push(new mapDomCmItem('PradaIMA', 'top_nav--prada'));
         mapDomCmArray.push(new mapDomCmItem('RayBanIMA', 'top_nav--rayban'));
         mapDomCmArray.push(new mapDomCmItem('TomFordIMA', 'top_nav--tomford'));
+        mapDomCmArray.push(new mapDomCmItem('KateSpadeNewYorkIMA', 'top_nav--katespadenewyork'));
 
         mapDomCmArray.push(new mapDomCmItem('CatEyeIMA', 'cat-eye'));
         mapDomCmArray.push(new mapDomCmItem('ShieldIMA', 'shield'));
@@ -83,12 +107,20 @@ $(function() {
         mapDomToCoremetricsTags();
         BLOOMIES.coremetrics.cmCreatePageviewTag('spring13_sunglass_shop--hp', 'spring13_sunglass_shop', '', '');
 
-        $('#map1 area').click (function(event){
+        $('#SunglassShop2013 #map1 area').click (function(evt){
             BLOOMIES.coremetrics.cmCreatePageElementTag(mapDomToCoremetricksLookup(this.id), 'spring13_sunglass_shop');
         });
 
-        $('#map2 area').click (function(event){
-            BLOOMIES.coremetrics.cmCreatePageElementTag(mapDomToCoremetricksLookup(this.id), 'spring13_sunglass_shop--hp');
+        $('div #SunglassShop2013').click (function(evt){
+        	if ($('.imageoverlaylink').length != 0) {
+        		var tid = $('.imageoverlay')[0].id.replace('OverlayDiv','');
+        		//var linkvarid = tid + 'Link';
+        		//var linkid = linkvarid + 'Id';
+        		//var lval = window[linkvarid];
+        		
+                BLOOMIES.coremetrics.cmCreatePageElementTag(mapDomToCoremetricksLookup(tid), 'spring13_sunglass_shop--hp');
+                //window.location.href = lval;
+        	}         	
         });
     };
 });

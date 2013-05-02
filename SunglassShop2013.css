@@ -28,6 +28,16 @@
     border: 0;
 }
 
+.TheSunglassShopIMAhover {
+    position: relative;
+    top: -482px;
+    left: 11px;
+    width: 86px;
+    height: 1px;
+    background-position: 0 0;
+    z-index: 9999;
+}
+
 .DiorIMAhover {
     position: relative;
     top: -482px;
@@ -95,6 +105,7 @@
     height: 237px;
     z-index: 9999;
     background-position: 0 0;
+    cursor: pointer;
 }
 
 .ShieldIMAOverlay {
@@ -104,7 +115,8 @@
     width: 247px;
     height: 238px;
     z-index: 9999;
-    background-position: 0 -277px;
+    background-position: 0 -257px;
+    cursor: pointer;
 }
 
 .OversizedIMAOverlay {
@@ -114,7 +126,8 @@
     width: 247px;
     height: 237px;
     z-index: 9999;
-    background-position: 0 -535px;
+    background-position: 0 -515px;
+    cursor: pointer;
 }
 .WayfarerIMAOverlay {
     position: relative;
@@ -123,7 +136,8 @@
     width: 249px;
     height: 237px;
     z-index: 9999;
-    background-position: 0 -792px;
+    background-position: 0 -773px;
+    cursor: pointer;
 }
 
 .PolarizedIMAOverlay {
@@ -133,7 +147,8 @@
     width: 248px;
     height: 238px;
     z-index: 9999;
-    background-position: 0 -1049px;
+    background-position: 0 -1030px;
+    cursor: pointer;
 }
 
 .AviatorIMAOverlay {
@@ -143,6 +158,7 @@
     width: 247px;
     height: 237px;
     z-index: 9999;
-    background-position: 0 -1306px;
+    background-position: 0 -1287px;
+    cursor: pointer;
 }
 

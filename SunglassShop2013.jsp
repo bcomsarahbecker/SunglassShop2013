@@ -14,16 +14,17 @@
 
 
 	<div id="SunglassShop2013">
-	    <img id="sun_topNav" src="${baseUrlAssets}/dyn_img/${dynImgFolder}/Sun_topNav.jpg" alt="Sunglass Shop 2013 Start" usemap="#map1" />
+	    <img id="sun_topNav" src="${baseUrlAssets}/dyn_img/${dynImgFolder}/Sun_topNav.jpg" alt="Sunglass Shop 2013" usemap="#map1" />
 	    <map id="map1" name="map1">
+	        <area id="TheSunglassShopIMA" class="sun_bottommenu" alt="The Sunglass Shop 2013" coords="8, 1, 100 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=sortBy%3DORIGINAL%26productsPerPage%3D96" />
 	        <area id="DiorIMA" class="sun_bottommenu" alt="Dior" coords="248, 1, 291, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DDior%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
 	        <area id="GucciIMA" class="sun_bottommenu" alt="Gucci" coords="299, 1, 346, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DGucci%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
 	        <area id="PradaIMA" class="sun_bottommenu" alt="Prada" coords="359, 1, 410, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DPrada%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
-	        <area id="RayBanIMA" class="sun_bottommenu" alt="RayBan" coords="422, 1, 485, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DRay-Ban%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
-	        <area id="TomFordIMA" class="sun_bottommenu" alt="TomFord" coords="498, 1, 568, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DTom%2520Ford%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
-	        <area id="KateSpadeNewYorkIMA" class="sun_bottommenu" alt="KateSpadeNewYork" coords="585, 1, 736, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3Dkate%2520spade%2520new%2520york%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
+	        <area id="RayBanIMA" class="sun_bottommenu" alt="Ray-Ban" coords="422, 1, 485, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DRay-Ban%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
+	        <area id="TomFordIMA" class="sun_bottommenu" alt="Tom Ford" coords="498, 1, 568, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3DTom%2520Ford%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
+	        <area id="KateSpadeNewYorkIMA" class="sun_bottommenu" alt="Kate Spade New York" coords="585, 1, 736, 28" shape="rect" href="/shop/jewelry-accessories/all-sunglasses?id=4520#!fn=BRAND%3Dkate%2520spade%2520new%2520york%26sortBy%3DORIGINAL%26productsPerPage%3D96" />
 	    </map>
-	    <img id="SunglassShop2013Start" src="${baseUrlAssets}/dyn_img/${dynImgFolder}/SunglassShop2013Start.jpg" alt="Sunglass Shop 2013 Start" usemap="#map2" />
+	    <img id="SunglassShop2013Start" src="${baseUrlAssets}/dyn_img/${dynImgFolder}/SunglassShop2013Start.jpg" alt="Sunglass Shop 2013" usemap="#map2" />
 	    <map id="map2" name="map2">
 	        <area id="CatEyeIMA" class="sun_bottomimage" alt="Cat Eye" coords="0, 0, 248, 237" shape="rect" href="javascript:void(0);" />
 	        <area id="ShieldIMA" class="sun_bottomimage" alt="Shield" coords="249, 0, 495, 237" shape="rect" href="javascript:void(0);" />
