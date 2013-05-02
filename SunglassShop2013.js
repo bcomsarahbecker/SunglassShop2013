@@ -60,13 +60,6 @@ $(function() {
         var oclass = this.id + 'Overlay';
         var tlink = this.id + 'Link';
 
-        //var insertDiv = '<a href="' + window[tlink] + '" class="' + 'SunglassShop2013LinkOverlay';
-        //var insertDiv = '<div class="' + 'SunglassShop2013LinkOverlay';
-        //insertDiv += '" id="' + odiv + '">';
-        
-        //var insertDiv = '<div id="' + odiv + '"';
-        //insertDiv += ' class="imageoverlay ' + oclass +  '"></div>';
-
         var insertDiv = '<a href="' + window[tlink] + '" class="imageoverlaylink">';
         insertDiv += '<div id="' + odiv;
         insertDiv += '" class="' + 'imageoverlay ' + oclass + '"></div></a>';
@@ -114,12 +107,8 @@ $(function() {
         $('div #SunglassShop2013').click (function(evt){
         	if ($('.imageoverlaylink').length != 0) {
         		var tid = $('.imageoverlay')[0].id.replace('OverlayDiv','');
-        		//var linkvarid = tid + 'Link';
-        		//var linkid = linkvarid + 'Id';
-        		//var lval = window[linkvarid];
         		
                 BLOOMIES.coremetrics.cmCreatePageElementTag(mapDomToCoremetricksLookup(tid), 'spring13_sunglass_shop--hp');
-                //window.location.href = lval;
         	}         	
         });
     };
